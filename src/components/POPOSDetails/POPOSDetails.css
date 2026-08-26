@@ -1,0 +1,18 @@
+.slideshow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.slideshow img {
+  max-width: 500px;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.slideshow button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}

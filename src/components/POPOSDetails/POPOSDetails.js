@@ -1,30 +1,46 @@
 // src/POPOSDetails.js
 
-import React from 'react'
-import { useParams } from 'react-router'
-import data from '../../sfpopos-data.json'
+import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import data from '../../sfpopos-data.json';
+import './POPOSDetails.css';
 
 function POPOSDetails(props) {
-  const params = useParams()
-  const { id } = params // Location index
-  const { images, title, desc, hours, features, geo } = data[id]
+  const { id } = useParams();
+  const spaceIndex = parseInt(id);
+  const space = data[spaceIndex];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  if (!space) {
+    return <div>Space not found</div>;
+  }
+
+  const { title, address, hours, description, images } = space;
+
+  const nextImage = () => {
+    setCurrentImageIndex((currentImageIndex + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((currentImageIndex - 1 + images.length) % images.length);
+  };
 
   return (
-    <div>
-      <div>
-        <img src={`${process.env.PUBLIC_URL}images/${images[0]}`} alt={title} />
+    <div className="POPOSDetails">
+      <h1>{title}</h1>
+      <p>{address}</p>
+      <p>{hours}</p>
+      
+      <div className="slideshow">
+        <img src={`${process.env.PUBLIC_URL}/images/${images[currentImageIndex]}`} alt={title} />
+        <button onClick={prevImage}>Previous</button>
+        <span>{currentImageIndex + 1} / {images.length}</span>
+        <button onClick={nextImage}>Next</button>
       </div>
-
-      <div>
-        <h1>{ title }</h1>
-        <p>{ desc }</p>
-        <p>{ hours }</p>
-        <p>{ features }</p>
-        <p>{ geo.lat } { geo.lon }</p>
-      </div>
-
+      
+      <p>{description}</p>
     </div>
-  )
+  );
 }
 
-export default POPOSDetails
+export default POPOSDetails;
