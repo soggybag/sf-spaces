@@ -1,4 +1,4 @@
-/*  src/Title.css  */
+ /* src/Title.css 
 
 .Title {
   box-sizing: border-box;
@@ -23,4 +23,27 @@
 .Title .nav-link-active {
   color: #fff;
   border-bottom: 2px solid;
+}
+ */
+
+ .Title {
+  background-color: darkblue;
+  color: darkgoldenrod;
+  padding: 1.5rem;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: auto;
+ }
+
+ .Title h1 {
+  margin: 0;           
+  font-size: 2rem;     
+  font-weight: 600;    
+}
+
+.Title a {
+  color: darkgoldenrod; 
+  text-decoration: none; 
+  font-weight: 400;
+  padding: 2em     
 }

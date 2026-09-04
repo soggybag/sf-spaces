@@ -3,7 +3,8 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../../sfpopos-data.json';
-import './POPOSDetails.css';
+
+import styles from './POPOSDetails.modules.css';
 
 function POPOSDetails(props) {
   const { id } = useParams();
@@ -26,17 +27,19 @@ function POPOSDetails(props) {
   };
 
   return (
-    <div className="POPOSDetails">
+    <div className={styles.POPOSDetails}>
       <h1>{title}</h1>
       <p>{address}</p>
       <p>{hours}</p>
-      
-      <div className="slideshow">
+
+      <div className={styles.slideshow}>
         <img src={`${process.env.PUBLIC_URL}/images/${images[currentImageIndex]}`} alt={title} />
         <button onClick={prevImage}>Previous</button>
         <span>{currentImageIndex + 1} / {images.length}</span>
         <button onClick={nextImage}>Next</button>
       </div>
+
+      
       
       <p>{description}</p>
     </div>

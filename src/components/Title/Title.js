@@ -1,10 +1,10 @@
 import React from 'react'
-import './Title.css';
 import { NavLink } from 'react-router-dom'
+import styles from './Title.module.css'
 
 function Title() {
   return (
-    <div className="Title">
+    <div className={styles.Title}>
       <header>
         <h1>SFPOPOS</h1>
         <div className="Title-Subtitle">San Francisco Privately Owned Public Open Spaces</div>

@@ -1,0 +1,6 @@
+.POPOSList {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  /* Responsive grid */
+}

@@ -1,12 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import POPOSList from './components/POPOSList/POPOSList'
-import { Outlet } from 'react-router-dom'
-import './App.css';
 import Title from './components/Title/Title';
 import About from './components/About/About'
 import POPOSDetails from './components/POPOSDetails/POPOSDetails'
