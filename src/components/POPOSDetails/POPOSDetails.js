@@ -34,9 +34,11 @@ function POPOSDetails(props) {
 
       <div className={styles.slideshow}>
         <img src={`${process.env.PUBLIC_URL}/images/${images[currentImageIndex]}`} alt={title} />
-        <button onClick={prevImage}>Previous</button>
-        <span>{currentImageIndex + 1} / {images.length}</span>
-        <button onClick={nextImage}>Next</button>
+        <div>
+          <button onClick={prevImage}>Previous</button>
+          <span>{currentImageIndex + 1} / {images.length}</span>
+          <button onClick={nextImage}>Next</button>
+        </div>
       </div>
 
       

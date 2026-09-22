@@ -31,9 +31,16 @@
   color: darkgoldenrod;
   padding: 1.5rem;
   justify-content: center;
-  text-align: center;
   margin-bottom: auto;
  }
+
+ .Title header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+
+}
 
  .Title h1 {
   margin: 0;           
@@ -46,4 +53,51 @@
   text-decoration: none; 
   font-weight: 400;
   padding: 2em     
+}
+
+.Title-menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  min-width: 44px;   /* touch target minimum */
+  min-height: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  left: 1.5rem;
+  position: absolute;
+}
+
+.Title-menu-btn span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: currentColor;
+}
+
+/* Mobile: hide nav, show button */
+.Title-nav {
+  max-height: 0;
+  overflow: hidden;
+  flex-direction: column;
+  transition: max-height 0.3s ease;
+}
+
+.Title-nav--open {
+  max-height: 300px;  /* larger than the nav will ever be */
+}
+
+@media (min-width: 768px) {
+  .Title-nav {
+    max-height: none;
+    overflow: visible;
+    flex-direction: row;
+    transition: none;
+  }
+
+  .Title-menu-btn {
+    display: none;
+  }
 }
