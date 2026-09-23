@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import styles from './Title.module.css'
 import { useState, useEffect, useRef } from 'react'
 
 function Title() {
@@ -21,7 +20,7 @@ function Title() {
   }, [])
 
   return (
-    <div className={styles.Title}>
+    <div className="bg-red-500">
       <header>
       <div >
 

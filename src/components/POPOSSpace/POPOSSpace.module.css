@@ -1,3 +1,6 @@
+@import "tailwindcss";
+
+
 .POPOSSpace {
 display: flex;
 flex-direction: column;
