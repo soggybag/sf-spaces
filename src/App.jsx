@@ -1,9 +1,9 @@
 import logo from './logo.svg';
-import Title from './components/Title/Title.js'
-import POPOSList from './components/POPOSList/POPOSList.js';
+import Title from './components/Title/Title.jsx'
+import POPOSList from './components/POPOSList/POPOSList.jsx';
 import Footer from './Footer'
 import { useState } from 'react'
-import POPOSDetails from './components/POPOSDetails/POPOSDetails.js'
+import POPOSDetails from './components/POPOSDetails/POPOSDetails.jsx'
 import { Outlet } from 'react-router-dom'
 import styles from './App.module.css'
 

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../../sfpopos-data.json';
 
-import styles from './POPOSDetails.modules.css';
+import styles from './POPOSDetails.module.css';
 
 function POPOSDetails(props) {
   const { id } = useParams();
@@ -33,7 +33,7 @@ function POPOSDetails(props) {
       <p>{hours}</p>
 
       <div className={styles.slideshow}>
-        <img src={`${process.env.PUBLIC_URL}/images/${images[currentImageIndex]}`} alt={title} />
+        <img src={`/images/${images[currentImageIndex]}`} alt={title} />
         <div>
           <button onClick={prevImage}>Previous</button>
           <span>{currentImageIndex + 1} / {images.length}</span>

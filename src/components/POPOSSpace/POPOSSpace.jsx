@@ -9,7 +9,7 @@ function POPOSSpace(props) {
     <div className={styles.POPOSSpace}>
       <Link to={`/details/${id}`}>
         <img
-          src={`${process.env.PUBLIC_URL}/images/${image}`}
+          src={`/images/${image}`}
           alt={name}
         />
       </Link>
